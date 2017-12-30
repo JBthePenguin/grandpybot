@@ -45,10 +45,11 @@
             <div id="right_part" class="card col-md-4">
                 <div class="card-body jumbotron text-center">
                     <p><strong>Recherche rapide avec le <em>minitel</em></strong></p>
-                    <button  id="switch_minitel" type="button">Connexion<br>Fin</button>
+                    <button  id="switch_minitel" onclick="click_on_switch()" type="button">Connexion<br>Fin</button>
                 </div>
                 <div class="card-text text-center">
                     {% block carousel %}{% endblock %}
+                    {% block minitel_screen %}{% endblock %}
                 </div>
             </div>
         </main>

@@ -185,6 +185,48 @@ main {
     background-color: #2F271D;
 }
 
+/*MINITEL*/
+
+#minitel-screen {
+    max-width: 100%;
+    display: none;
+}
+
+pre {
+    max-height: 100%;
+    max-width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: left;
+    font-size: 1em;
+    background-color: black;
+    border: 14px solid #2F271D;
+    border-radius: 15px;
+    color: white;
+}
+
+pre input{
+    background-color: black;
+    border: none;
+}
+
+pre input .cursor {
+    background-color: white;
+}
+
+.white-bg {
+    background-color: white;
+    color: black;
+}
+
+#touch_minitel{
+    background: #59472F;
+    color: #FFF;
+    padding: 3px;
+    border-radius: 3px;
+    display: none;
+}
 
 /*FOOTER*/
 
