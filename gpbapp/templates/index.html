@@ -1,7 +1,27 @@
 {% extends 'base.html' %}
 
-{% block content %}
-<div class="text-center panel">
-    <h2>I'm a block </h2>
+{% block dialog_box %}
+<div class="dialog-area row">
+    <div class="msg_gpb col-md-11 col-md-offset-1 container-fluid">
+        <div class="card alert alert-info text-center">
+            <img src="{{ url_for('static', filename='img/gpb_img.png') }}"><br />
+            <img class="card_img" src="{{ url_for('static', filename='img/map_world.png') }}" alt="map world">
+            <p>Tu peux me demander ce que tu veux, n'hésite pas!<br />Si c'est un simple renseignement sur un lieu, ça m'arrange.</p>
+        </div>
+    </div>
+    <div class="msg_user col-md-11 container-fluid">
+        <div class="card alert alert-success text-center">
+            <i class="fa fa-user-circle-o fa-2x"></i>
+            <p>J'aimerai connaître l'adresse d'un bon bistrot.</p>
+        </div>
+    </div>
+</div>
+<div class="input-area row">
+    <div class="text-bar input-group col-md-12">
+        <input id="input_dialog" type="text" class="form-control" placeholder="Rechercher dans GrandPyBot Maps...">
+        <span class="input-group-btn">
+            <button id="btn_dialog" class="btn btn-secondary" type="button">Go!</button>
+        </span>
+    </div>
 </div>
 {% endblock %}
