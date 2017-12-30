@@ -12,16 +12,28 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'bubblegum';
+    src:  url('../fonts/bubblegum/bubblegum.eot');
+    src:  url('../fonts/bubblegum/bubblegum.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/bubblegum/bubblegum.woff2') format('woff2'),
+        url('../fonts/bubblegum/bubblegum.woff') format('woff'),
+        url('../fonts/bubblegum/bubblegum.ttf') format('truetype'),
+        url('../fonts/bubblegum/bubblegum.svg#bubblegum') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 strong {
     font-size: 1.2em;
 }
 
 a {
-  color: #6C0808;
+    color: #6C0808;
 }
 
 a:hover {
-  color: #FCE94F;
+    color: #FCE94F;
 }
 
 
@@ -35,9 +47,10 @@ html, body{
 }
 
 #page{
-    background-color: red;
+    background-color: black;
     height: 100%;
 }
+
 
 
 /*HEADER*/
@@ -47,4 +60,37 @@ header {
     background: linear-gradient(90deg, #6B5C1E, #D8D7D5);
     font-family: 'ArmWrestler', Arial, sans-serif;
     font-size: 1.2em;
+    min-height: 15%;
+}
+
+/*MAIN*/
+main {
+    background-color: green;
+    min-height: 81%;
+}
+
+
+/*FOOTER*/
+
+footer {
+    min-height: 4%;
+    background-color: black;
+    text-align: left;
+    font-family: bubblegum, 'Arial', sans-serif;
+    color: #EAE0B4;
+    font-size: 0.8em;
+}
+
+footer p {
+    float: left;
+}
+
+footer a {
+    margin: 2px;
+    color: #6B5C1E;
+    float: left;
+}
+
+#jb_the_penguin {
+    float: left;
 }
