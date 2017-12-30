@@ -1,8 +1,50 @@
-div {
-    background-color: white;
-    margin: 10px;
+/*FONTS*/
+
+@font-face {
+    font-family: 'ArmWrestler';
+    src:  url('../fonts/ArmWrestler/ArmWrestler.eot');
+    src:  url('../fonts/ArmWrestler/ArmWrestler.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ArmWrestler/ArmWrestler.woff2') format('woff2'),
+        url('../fonts/ArmWrestler/ArmWrestler.woff') format('woff'),
+        url('../fonts/ArmWrestler/ArmWrestler.ttf') format('truetype'),
+        url('../fonts/ArmWrestler/ArmWrestler.svg#ArmWrestler') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.panel {
-    background-color: green;
+strong {
+    font-size: 1.2em;
+}
+
+a {
+  color: #6C0808;
+}
+
+a:hover {
+  color: #FCE94F;
+}
+
+
+/*SIZE 100%*/
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    height: 100%;
+}
+
+#page{
+    background-color: red;
+    height: 100%;
+}
+
+
+/*HEADER*/
+
+header {
+    padding-bottom: 15px;
+    background: linear-gradient(90deg, #6B5C1E, #D8D7D5);
+    font-family: 'ArmWrestler', Arial, sans-serif;
+    font-size: 1.2em;
 }

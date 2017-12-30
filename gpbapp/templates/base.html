@@ -20,14 +20,26 @@
 
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center">Hello World !!!</h1>
-                {% block content %}{% endblock %}
-                <button type="button" class="btn btn-danger"><h3>{{ object_python }}</h3></button>
+    <div id="page" class="container-fluid">
+        <header class="row text-center">
+            <div class="container-fluid col-md-11">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 id="title" class="display-2">Bienvenue chez <strong>GrandPy Bot</strong></h1>
+                    </div>
+                    <div class="col-md-12">
+                        <em><p>Même en étant à la retraite depuis le 30 juin 2012, après 30 ans d'activité, je peux encore rendre bien des services,... et oui, c'était moi le <em><a href="https://fr.wikipedia.org/wiki/Minitel#Lancement_commercial">3611</a></em> sur le minitel.</p></em>
+                    </div>
+                </div>
             </div>
-        </div>
+            <div class="col-md-1" id="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+            </div>
+        </header>
+        <main class="row">
+        </main>
+        <footer class="row">
+        </footer>
     </div>
 
     <!-- Bootstrap Core JavaScript  and Jquery -->

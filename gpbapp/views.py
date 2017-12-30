@@ -11,7 +11,7 @@ app.config.from_object('config')
 @app.route('/')
 def index():
     return render_template(
-        "index.html", object_python="I'm a Python's object")
+        "index.html",)
 
 
 if __name__ == "__main__":
