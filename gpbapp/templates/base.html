@@ -42,14 +42,21 @@
                     {% block dialog_box %}{% endblock %} 
                 </div>
             </div>
-            <div id="right_part" class="col-md-4">
+            <div id="right_part" class="card col-md-4">
+                <div class="card-body jumbotron text-center">
+                    <p><strong>Recherche rapide avec le <em>minitel</em></strong></p>
+                    <button  id="switch_minitel" type="button">Connexion<br>Fin</button>
+                </div>
+                <div class="card-text text-center">
+                    {% block carousel %}{% endblock %}
+                </div>
             </div>
         </main>
         <footer class="row">
             <div class="col-md-12">
                 <img id="jb_the_penguin" src="{{ url_for('static', filename='img/jbthepenguin.png') }}">
                 <p>© Copyright 2017 JBthePenguin - No right reserved</p>
-                <a href="https://github.com">
+                <a href="https://github.com/JBthePenguin">
                     <i class="fa fa-github-square fa-2x text-white"></i>
                 </a>
                 <a href="https://twitter.com">
