@@ -80,17 +80,18 @@ main {
 }
 
 #dialog_box {
-    min-height: 100%;
     margin: auto;
     border: 3px solid black;
     border-radius: 15px;
     background-color: #ECECE6;
 }
 
-.dialog-area {
+#dialog-area {
+    max-height: 74vh;
     margin: auto;
     padding: 3px;
     font-size: 1.6em;
+    overflow: auto;
 }
 
 .msg_gpd, .msg_user {
@@ -102,7 +103,7 @@ main {
     border: 2px solid #204A87;
 }
 
-.msg_user .card {
+.msg_user{
     border: 2px solid #4E9A06;
 } 
 
