@@ -99,7 +99,7 @@ main {
     padding: 5px;
 }
 
-.msg_gpb .card {
+.msg_gpb {
     border: 2px solid #204A87;
 }
 
@@ -190,7 +190,7 @@ main {
 
 #minitel-screen {
     max-width: 100%;
-    display: none;
+    display: inline-block;
 }
 
 pre {
@@ -226,7 +226,7 @@ pre input .cursor {
     color: #FFF;
     padding: 3px;
     border-radius: 3px;
-    display: none;
+    display: inline-block;
 }
 
 /*FOOTER*/

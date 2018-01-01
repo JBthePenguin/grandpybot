@@ -2,12 +2,10 @@
 
 {% block dialog_box %}
 <div id="dialog-area" class="row">
-    <div class="msg_gpb col-md-11 col-md-offset-1">
-        <div class="card alert-info text-center">
-            <img src="{{ url_for('static', filename='img/gpb_img.png') }}"><br />
-            <img class="card_img" src="{{ url_for('static', filename='img/map_world.png') }}" alt="map world">
-            <p>Tu peux me demander ce que tu veux, n'hésite pas!<br />Si c'est un simple renseignement sur un lieu, ça m'arrange.</p>
-        </div>
+    <div class="msg_gpb col-md-11 col-md-offset-1 card alert-info text-center">
+        <img id="gpb_img_msg" src="{{ url_for('static', filename='img/gpb_img.png') }}"><br />
+        <img class="card_img" src="{{ url_for('static', filename='img/map_world.png') }}" alt="map world">
+        <p>Tu peux me demander ce que tu veux, n'hésite pas!<br />Si c'est un simple renseignement sur un lieu, ça m'arrange.</p>
     </div>
 </div>
 <div class="input-area row">

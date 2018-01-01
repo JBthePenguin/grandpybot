@@ -1,4 +1,7 @@
-from flask import Flask, render_template
+#! /usr/bin/env python3
+# coding: utf-8
+
+from flask import Flask, render_template, jsonify, request
 
 
 app = Flask(__name__)
@@ -12,6 +15,12 @@ app.config.from_object('config')
 def index():
     return render_template(
         "index.html",)
+
+@app.route('/api/')
+def api():
+	input_user = request.args.get('a', 0, type=str)
+	response = "I have received this message : " + input_user
+	return jsonify(response)
 
 
 if __name__ == "__main__":
