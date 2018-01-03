@@ -1,0 +1,4 @@
+{
+  "gpbapp/tests/test_gpb.py::TestGpb::()::test_input": true,
+  "gpbapp/tests/test_gpb.py::TestInput::()": true
+}

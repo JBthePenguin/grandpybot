@@ -9,6 +9,6 @@
 
 SECRET_KEY = ""
 
-GM_APP_ID = 1234
+GM_APP_ID = "testcommit"
 
 WIKI_APP_ID = 5678
