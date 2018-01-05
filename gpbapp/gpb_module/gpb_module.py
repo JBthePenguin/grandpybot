@@ -18,4 +18,28 @@ def recovery_key_word(input_user):
 		if word in input_user:
 			input_user.remove(word)
 	return input_user
-	
+
+def handle_gmaps_return(gmaps_response):
+	""" handle the gmaps response and prepare the response"""
+	if gmaps_response["status"] == "ZERO_RESULTS":
+		response = {
+			"found" : "NO",
+			"response": "Bizarre, je ne connais pas ou je n'ai pas compris"
+		}
+	elif gmaps_response["status"] == "OK":
+		gmaps_result = gmaps_response["results"]
+		gmaps_result = gmaps_result[0]
+		name = gmaps_result["name"]
+		address = gmaps_result["formatted_address"]
+		location = gmaps_result["geometry"]
+		location = location["location"]
+		location = (location["lat"], location["lng"])
+		response = {
+			"found" : "YES",
+			"response" : {
+				"name": name,
+				"address": address,
+				"location": location
+			}
+		}
+	return response

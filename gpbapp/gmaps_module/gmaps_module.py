@@ -4,7 +4,7 @@
 import googlemaps
 
 
-def make_request(list_words, gmaps):
+def make_gmaps_request(list_words, gmaps):
 	""" make a request to google maps api with googlemaps module"""
 	query = ""
 	for word in list_words:
@@ -19,11 +19,9 @@ def call_gmaps_api(list_words, GM_APP_ID):
 	if no result, try with less one,...
 	and resturn the result"""
 	gmaps = googlemaps.Client(key=GM_APP_ID)
-	places_result = make_request(list_words, gmaps)
+	places_result = make_gmaps_request(list_words, gmaps)
 
-	if places_result["status"] == "OK": 
-		return places_result
-	elif places_result["status"] == 'ZERO_RESULTS':
+	if places_result["status"] == 'ZERO_RESULTS':
 		i = 1
 		while i < len(list_words):
 			ind = 0
@@ -31,10 +29,10 @@ def call_gmaps_api(list_words, GM_APP_ID):
 			while (places_result["status"] == 'ZERO_RESULTS') and (
 				ind <= i):
 				new_list_words = list_words[ind:((len_new_list-1)+ind)]
-				places_result = make_request(new_list_words, gmaps)
+				places_result = make_gmaps_request(new_list_words, gmaps)
 				ind += 1
 			if places_result["status"] == "OK": 
 				return places_result
 			i +=1
-		return places_result 
+	return places_result 
 			

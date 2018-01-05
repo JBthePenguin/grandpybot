@@ -20,8 +20,10 @@ pip install flask
 or
 pip install -r requirements.txt
   
-#### 6.Run:
+#### 6.a Run app:
 python run.py
+#### 6.b Run tests:
+pytest
 
 ### Now, with your favorite browser, go to this url:
 127.0.0.1:5000
