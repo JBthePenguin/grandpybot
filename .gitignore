@@ -2,9 +2,9 @@ env/
 
 __pycache__/
 
-/config.py
+./config.py
 
-/config.pyc
+./config.pyc
 
 gpbapp/__pycache__/
 
@@ -15,5 +15,7 @@ gpbapp/views.pyc
 gpbapp/gmaps_module/__pycache__/
 
 gpbapp/gpb_module/__pycache__/
+
+gpbapp/wiki_module/__pycache__/
 
 gpbapp/tests/__pycache__/

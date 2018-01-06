@@ -3,9 +3,9 @@
 
 import random, string
 
-import googlemaps
+import googlemaps, wikipedia
 
-from .. import gpb_module, gmaps_module
+from .. import gpb_module, gmaps_module, wiki_module
 
 from .. import views
 
@@ -100,3 +100,64 @@ class TestGmaps:
 		assert gmaps_module.call_gmaps_api(
 			["grandpy"], GM_APP_ID
 			) == results
+
+
+class TestWiki:
+	"""Test for gmaps_module"""
+	def test_call_wiki_api(self, monkeypatch):
+		gmaps_result = {
+			"found" : "YES",
+			"response": {
+				"name": "OpenClassrooms",
+				"address" : "7 Cité Paradis, 75010 Paris, France",
+				"location" : (48, 2) 
+			}
+		}
+
+		wiki_search_result = ['Cité Paradis', 'Paradis', 'Paris', 'Vanessa Paradis']	
+		
+		def mocksearchreturn(request):
+			return wiki_search_result
+
+		monkeypatch.setattr(wikipedia, "search", mocksearchreturn)
+
+		wiki_summary_result = "La cité Paradis est une voie publique."
+
+		def mocksummaryreturn(request, *args, **kwargs):
+			return wiki_summary_result
+
+		monkeypatch.setattr(wikipedia, "summary", mocksummaryreturn)
+
+		response = {
+			"found" : "YES",
+			"response": {
+				"name": "OpenClassrooms",
+				"address" : "7 Cité Paradis, 75010 Paris, France",
+				"location" : (48, 2),
+				"text" : "La cité Paradis est une voie publique."
+			}
+		}
+		
+		assert wiki_module.call_wiki_api(gmaps_result) == response
+
+		wiki_search_result = []
+
+		def mocksearchreturn(request):
+			return wiki_search_result
+
+		monkeypatch.setattr(wikipedia, "search", mocksearchreturn)
+
+		response = {
+			"found" : "YES",
+			"response": {
+				"name": "OpenClassrooms",
+				"address" : "7 Cité Paradis, 75010 Paris, France",
+				"location" : (48, 2),
+				"text" : "Etrange, je ne connais pas cet endroit"
+			}
+		}
+
+		assert wiki_module.call_wiki_api(gmaps_result) == response
+
+
+		

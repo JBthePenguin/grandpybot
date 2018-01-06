@@ -5,6 +5,7 @@ from flask import Flask, render_template, jsonify, request
 
 from .gpb_module import recovery_key_word, handle_gmaps_return
 from .gmaps_module import call_gmaps_api
+from .wiki_module import call_wiki_api
 
 # MAIN_DIR = path_dirname(__file__)
 
@@ -31,9 +32,11 @@ def api():
 	# Handle the google's return
 	response = handle_gmaps_return(response)
 	# If there is a return:
+	if response["found"] == "YES":
 		# AJAX request with Wikipedia API
-		# Handle the wiki's return
-	# Prepare and send the response for client -> json
+		# and handle the wiki's return
+		response = call_wiki_api(response)
+	# send the response for client -> json
 	print(response)
 	return jsonify(response)
 
