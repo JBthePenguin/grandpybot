@@ -46,7 +46,10 @@ class TestGpb:
 			"response": {
 				"name": "OpenClassrooms",
 				"address" : "Paris",
-				"location" : (48, 2) 
+				"location" : {
+					"lat": 48,
+					"lng": 2
+				}
 			}
 		}
 		assert gpb_module.handle_gmaps_return(
@@ -69,7 +72,7 @@ class TestGmaps:
 	"""Test for gmaps_module"""
 	def test_make_gmaps_request(self, monkeypatch):
 		"""google maps api key valide needed"""
-		GM_APP_ID = views.app.config["GM_APP_ID"]
+		GM_APP_ID = views.app.config["GM_WEB_APP_ID"]
 		results = {"html_attributions": [],
 			"results": [{"formatted_address": 'Paris',
 				"name": "OpenClassrooms"}],
@@ -86,7 +89,7 @@ class TestGmaps:
 
 	def test_call_gmaps_api(self, monkeypatch):
 		"""google maps api key valide needed"""
-		GM_APP_ID = views.app.config["GM_APP_ID"]
+		GM_APP_ID = views.app.config["GM_WEB_APP_ID"]
 		results = {
 			"html_attributions": [],
 			"results": [],
@@ -103,14 +106,17 @@ class TestGmaps:
 
 
 class TestWiki:
-	"""Test for gmaps_module"""
+	"""Test for wiki_module"""
 	def test_call_wiki_api(self, monkeypatch):
 		gmaps_result = {
 			"found" : "YES",
 			"response": {
 				"name": "OpenClassrooms",
 				"address" : "7 Cité Paradis, 75010 Paris, France",
-				"location" : (48, 2) 
+				"location" : {
+					"lat": 48,
+					"lng": 2
+				} 
 			}
 		}
 
@@ -133,7 +139,10 @@ class TestWiki:
 			"response": {
 				"name": "OpenClassrooms",
 				"address" : "7 Cité Paradis, 75010 Paris, France",
-				"location" : (48, 2),
+				"location" : {
+					"lat": 48,
+					"lng": 2
+				},
 				"text" : "La cité Paradis est une voie publique."
 			}
 		}
@@ -152,8 +161,11 @@ class TestWiki:
 			"response": {
 				"name": "OpenClassrooms",
 				"address" : "7 Cité Paradis, 75010 Paris, France",
-				"location" : (48, 2),
-				"text" : "Etrange, je ne connais pas cet endroit"
+				"location" : {
+					"lat": 48,
+					"lng": 2
+				},
+				"text" : "Etrange, je ne me rappelle plus."
 			}
 		}
 

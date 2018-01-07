@@ -27,3 +27,5 @@ pytest
 
 ### Now, with your favorite browser, go to this url:
 127.0.0.1:5000
+
+note: You need valide key for GoogleMaps APIs("WEB" and "JS")

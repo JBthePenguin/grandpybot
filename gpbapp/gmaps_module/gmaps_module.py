@@ -14,11 +14,11 @@ def make_gmaps_request(list_words, gmaps):
 	return places_result
 
 
-def call_gmaps_api(list_words, GM_APP_ID):
+def call_gmaps_api(list_words, GM_WEB_APP_ID):
 	""" call google maps api with all words,
 	if no result, try with less one,...
 	and resturn the result"""
-	gmaps = googlemaps.Client(key=GM_APP_ID)
+	gmaps = googlemaps.Client(key=GM_WEB_APP_ID)
 	places_result = make_gmaps_request(list_words, gmaps)
 
 	if places_result["status"] == 'ZERO_RESULTS':

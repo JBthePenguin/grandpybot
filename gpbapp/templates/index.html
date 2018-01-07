@@ -2,7 +2,7 @@
 
 {% block dialog_box %}
 <div id="dialog-area" class="row">
-    <div class="msg_gpb col-md-11 col-md-offset-1 card alert-info text-center">
+    <div class="msg_gpb col-md-12 card alert-info text-center">
         <img id="gpb_img_msg" src="{{ url_for('static', filename='img/gpb_img.png') }}"><br />
         <img class="card_img" src="{{ url_for('static', filename='img/map_world.png') }}" alt="map world">
         <p>Tu peux me demander ce que tu veux, n'hésite pas!<br />Si c'est un simple renseignement sur un lieu, ça m'arrange.</p>
@@ -60,13 +60,13 @@ LES PAGES ▀▀█ █▀▀ █ █   (c) 2000
    JAUNES ▀▀█ █▀█ █ █ france telecom
           ▀▀▀ ▀▀▀ ▀ ▀
 ―――――――――――――――――――――――――――――――――――――――――
-Nom/Marque: <input id="InputToFocus" placeholder="..............................">
-Activité: <input placeholder="................................">
-Localité: <input placeholder="................................">
+Nom/Marque:<input id="input_minitel" placeholder=".............................." maxlength="30">
+Activité:................................
+Localité:................................
            Vous pouvez préciser
-Département: <input placeholder=".............................">
-Adresse: <input placeholder=".................................">
-Prénom: <input placeholder="..................................">
+Département:.............................
+Adresse:.................................
+Prénom:..................................
 ―――――――――――――――――――――――――――――――――――――――――
                 Comment remplir     <span class="white-bg">Guide</span>
 Infos éditeur, autre recherches     <span class="white-bg">Somm.</span>
@@ -75,5 +75,5 @@ En recherche par activité, l'ordre de
 présentation des réponses évolue.
 Pour en savoir plus, tapez:        <span class="white-bg">^Envoi</span></pre>
 </div>
-<button  id="touch_minitel" class="fa fa-arrow-right fa-2x" onclick="" type="button"></button>
+<button  id="btn_minitel" class="fa fa-arrow-right fa-2x" onclick="click_btn_minitel()" type="button"></button>
 {% endblock %}

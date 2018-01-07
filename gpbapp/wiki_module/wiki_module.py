@@ -13,7 +13,7 @@ def call_wiki_api(gmaps_result):
 	wikipedia.set_lang("fr")
 	list_results = wikipedia.search(wiki_search)
 	if list_results == []:
-		text = "Etrange, je ne connais pas cet endroit"
+		text = "Etrange, je ne me rappelle plus."
 	else:
 		title_page = list_results[0]
 		text = wikipedia.summary(title_page, sentences=1)

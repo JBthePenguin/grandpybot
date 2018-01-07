@@ -18,8 +18,8 @@ app.config.from_object('config')
 
 @app.route('/')
 def index():
-    return render_template(
-        "index.html",)
+    return render_template("index.html",
+    	GM_JS_APP_ID=app.config["GM_JS_APP_ID"])
 
 @app.route('/api/')
 def api():
@@ -28,7 +28,7 @@ def api():
 	# Recovery the key words
 	input_user = recovery_key_word(input_user)
 	# AJAX request with GoogleMap API
-	response = call_gmaps_api(input_user, app.config["GM_APP_ID"])
+	response = call_gmaps_api(input_user, app.config["GM_WEB_APP_ID"])
 	# Handle the google's return
 	response = handle_gmaps_return(response)
 	# If there is a return:

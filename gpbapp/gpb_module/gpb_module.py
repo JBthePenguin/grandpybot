@@ -33,7 +33,6 @@ def handle_gmaps_return(gmaps_response):
 		address = gmaps_result["formatted_address"]
 		location = gmaps_result["geometry"]
 		location = location["location"]
-		location = (location["lat"], location["lng"])
 		response = {
 			"found" : "YES",
 			"response" : {

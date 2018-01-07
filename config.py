@@ -9,4 +9,6 @@
 
 SECRET_KEY = ""
 
-GM_APP_ID = "testcommit651565"
+GM_WEB_APP_ID = ""
+
+GM_JS_APP_ID = ""
