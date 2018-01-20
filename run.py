@@ -1,8 +1,10 @@
 #! /usr/bin/env python3
 # coding: utf-8
 
-from gpbapp import app
+""" Run Flask application """
+
+from gpbapp import APP
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    APP.run(debug=True)

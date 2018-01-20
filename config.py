@@ -1,13 +1,7 @@
 #! /usr/bin/env python3
 # coding: utf-8
 
-
-
-# To generate a new secret key:
-# >>> import random, string
-# >>> "".join([random.choice(string.printable) for _ in range(24)])
-
-SECRET_KEY = ""
+""" Config file with Google Maps APIs WEB and JS keys"""
 
 GM_WEB_APP_ID = ""
 

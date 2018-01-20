@@ -2,9 +2,7 @@ env/
 
 __pycache__/
 
-./config.py
-
-./config.pyc
+config.pyc
 
 gpbapp/__pycache__/
 

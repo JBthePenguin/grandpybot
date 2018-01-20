@@ -1,6 +1,6 @@
-$("#input_dialog").focus();
-
+//
 // CAROUSEL
+//
 
 $("#minitel-screen").hide();
 $("#btn_minitel").hide();
@@ -11,8 +11,9 @@ $(function (){
 
 $('#myCarousel').carousel({interval: 10000});
 
-
+//
 // MINITEL
+//
 
 function click_on_switch() {
     if ($("#minitel-screen").css("display") === "none"){
@@ -27,13 +28,19 @@ function click_on_switch() {
     }
 }
 
+//
 // DIALOG BOX
+//
+
+$("#input_dialog").focus();
 
 function fixe_scroll_down() {
     document.getElementById(
         'dialog-area').scrollTop = document.getElementById(
         'dialog-area').scrollHeight;
 }
+
+fixe_scroll_down();
 
 // create and add user's message
 function create_add_user_msg($new_msg){
@@ -43,7 +50,6 @@ function create_add_user_msg($new_msg){
         "msg_user col-md-12 card alert-success text-center");
     $new_card.append($new_msg);
     $("#dialog-area").append($new_card);
-    fixe_scroll_down();
 }
 
 // create and add GrandPy Bot message
@@ -56,6 +62,10 @@ function create_add_gpb_msg($new_msg){
     $("#dialog-area").append($new_card);
     fixe_scroll_down();
 }
+
+//
+// ANSWER
+//
 
 // Create map
 function initMap(map_div, location) {
@@ -75,7 +85,6 @@ function initMap(map_div, location) {
 }
 
 // create and add GrandPy Bot message with server's result
-
 var $map_div = $("<div id='map' class='col-md-12'></div>");
 
 function prepare_answer(api_response){
@@ -100,6 +109,10 @@ function prepare_answer(api_response){
     }
 }
 
+//
+// EVENTS
+//
+
 // event click on button
 function click_btn(input_user){
     if (input_user !== ""){
@@ -118,6 +131,7 @@ function click_btn(input_user){
             alt: 'loading'
         });
         create_add_gpb_msg($new_msg);
+        fixe_scroll_down();
     }
 }
 

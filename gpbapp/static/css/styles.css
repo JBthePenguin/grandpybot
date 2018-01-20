@@ -91,7 +91,7 @@ main {
     margin: auto;
     padding: 3px;
     font-size: 1.6em;
-    overflow: auto;
+    overflow-x: scroll;
 }
 
 .msg_gpd, .msg_user {
