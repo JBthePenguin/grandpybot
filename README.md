@@ -23,7 +23,7 @@ or
 #### 6.a Run tests:
 ```
 pip install pytest
-pytest
+pytest gpbapp
 ```
 #### 6.b Run app:
 `python run.py`
